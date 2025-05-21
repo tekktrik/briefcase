@@ -6,7 +6,6 @@ import socket
 import subprocess
 import sys
 from collections.abc import Iterable, Mapping
-from functools import cache
 from pathlib import Path, PosixPath, PurePosixPath
 
 from packaging.version import InvalidVersion, Version
@@ -344,7 +343,6 @@ Delete this file and run Briefcase again.
 
         return is_user_mapped
 
-    @cache
     def cache_image(self, image_tag: str):
         """Ensures an image is available and cached locally.
 
